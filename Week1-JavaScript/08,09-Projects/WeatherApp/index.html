@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Desi Weather App</title>
+    <style>
+      :root {
+        --bg-light: #f2f2f2;
+        --bg-dark: #121212;
+        --text-light: #000;
+        --text-dark: #fff;
+        --card-light: #fff;
+        --card-dark: #1e1e1e;
+      }
+
+      body {
+        font-family: sans-serif;
+        padding: 30px;
+        text-align: center;
+        background-color: var(--bg-light);
+        color: var(--text-light);
+        transition: background 0.3s, color 0.3s;
+      }
+
+      input,
+      button {
+        padding: 10px;
+        font-size: 16px;
+        margin: 5px;
+      }
+
+      .weather {
+        margin-top: 20px;
+        padding: 20px;
+        background: var(--card-light);
+        border-radius: 12px;
+        box-shadow: 0 0 6px #ccc;
+        display: inline-block;
+        transition: background 0.3s;
+      }
+
+      .dark body {
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+      }
+
+      .dark .weather {
+        background: var(--card-dark);
+      }
+
+      #icon {
+        width: 80px;
+        height: 80px;
+      }
+
+      .toggle-btn {
+        float: right;
+        margin: 0 0 10px 0;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="toggle-btn" id="toggleModeBtn">🌙 Dark Mode</button>
+
+    <h2>🌤️ Desi Weather App</h2>
+    <input id="cityInput" placeholder="Enter city name (e.g. Delhi)" />
+    <button id="getWeatherBtn">Get Weather</button>
+
+    <div class="weather" id="weatherDisplay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
