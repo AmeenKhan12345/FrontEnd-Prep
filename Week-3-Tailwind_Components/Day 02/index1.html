@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout – Responsive Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
+    <div class="p-6">
+        <h1 class="text-2xl font-bold mb-6 text-center">🔲 Grid Layout – Responsive Cards</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card A -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow">
+                <h2 class="text-xl font-semibold">Card A</h2>
+                <p class="text-gray-600 dark:text-gray-300">Responsive with Grid layout.</p>
+            </div>
+
+            <!-- Card B -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow">
+                <h2 class="text-xl font-semibold">Card B</h2>
+                <p class="text-gray-600 dark:text-gray-300">Each breakpoint has column rules.</p>
+            </div>
+
+            <!-- Card C -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow">
+                <h2 class="text-xl font-semibold">Card C</h2>
+                <p class="text-gray-600 dark:text-gray-300">Try resizing your screen!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: A Dark Mode Toggle -->
+    <div class="fixed bottom-4 right-4">
+        <button onclick="toggleDarkMode()" class="p-3 rounded-full bg-gray-800 text-white shadow-lg">
+            Toggle Dark Mode
+        </button>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+        }
+    </script>
+</body>
+
+</html>

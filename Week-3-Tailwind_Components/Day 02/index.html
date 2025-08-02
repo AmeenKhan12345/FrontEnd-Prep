@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout - Responsive Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
+    <div class="p-6">
+        <h1 class="text-2xl font-bold mb-6 text-center">⚡ Flex Layout – Responsive Cards</h1>
+        
+        <div class="flex flex-col md:flex-row gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow flex-1">
+                <h2 class="text-xl font-semibold">Card 1</h2>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow flex-1">
+                <h2 class="text-xl font-semibold">Card 2</h2>
+                <p class="text-gray-600 dark:text-gray-300">Consectetur adipiscing elit.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow flex-1">
+                <h2 class="text-xl font-semibold">Card 3</h2>
+                <p class="text-gray-600 dark:text-gray-300">Sed do eiusmod tempor incididunt.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: A Dark Mode Toggle -->
+    <div class="fixed bottom-4 right-4">
+        <button onclick="toggleDarkMode()" class="p-3 rounded-full bg-gray-800 text-white shadow-lg">
+            Toggle Dark Mode
+        </button>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+        }
+    </script>
+</body>
+
+</html>
